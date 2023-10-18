@@ -4,13 +4,14 @@ import React, { useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import AvailableTime from "./available-time/AvailableTime";
 
+
 export default function CalendarDate() {
   const [date, setDate] = useState<Date | undefined>(new Date());
 
   return (
     <>
       {date ? (
-        <AvailableTime />
+        <AvailableTime date={date} setDate={setDate}  />
       ) : (
         <Calendar
           mode="single"
