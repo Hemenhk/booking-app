@@ -24,10 +24,19 @@ const links = [
   { href: "/vitaminboost", handle: "vitamin boost" },
 ];
 
-export default function TheSideNav() {
+type SideNavProps = {
+  isHomePage: boolean;
+  isHovered: boolean;
+};
+
+export default function TheSideNav({ isHomePage, isHovered }: SideNavProps) {
+  const btnColorValue = isHomePage
+    ? `${isHovered ? "text-black" : "text-white"}`
+    : "text-white";
+
   return (
     <Sheet>
-      <SheetTrigger className="text-white">
+      <SheetTrigger className={btnColorValue}>
         <FiMenu size={35} />
       </SheetTrigger>
       <SheetContent side={"left"}>
