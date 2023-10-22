@@ -1,6 +1,7 @@
 import HomePage from "@/components/home-page/HomePage";
 
 import classes from "./HomePage.module.css";
+import TheOpeningHours from "@/components/home-page/opening-hours/TheOpeningHours";
 
 export default function Home() {
   // const bgImageStyle = {
@@ -15,7 +16,8 @@ export default function Home() {
         <div className="relative top-[50%] lg:top-[70%] pl-8">
           <HomePage />
         </div>
-      </div>
+        
+      </div><TheOpeningHours />
     </div>
   );
 }
